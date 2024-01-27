@@ -23,6 +23,8 @@ public class PlayerGroundController : PlayerSubController
     public override void OnEnable()
     {
         playerController.airController.ResetJumps();
+        playerController.rb.gravityScale = 10f;
+
     }
 
     public override void Update()

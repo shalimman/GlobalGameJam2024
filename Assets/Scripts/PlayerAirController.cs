@@ -43,10 +43,15 @@ public class PlayerAirController : PlayerSubController
             playerController.SetController(playerController.groundController);
         }
 
-        if (Physics2D.OverlapCircle(playerController.wallCheck.position, 0.2f, playerController.wallLayer))
+        if(playerController.rb.velocity.y < 0)
         {
-            playerController.SetController(playerController.wallController);
+            playerController.rb.gravityScale = 0.2f;
         }
+
+        //if (Physics2D.OverlapCircle(playerController.wallCheck.position, 0.2f, playerController.wallLayer))
+        //{
+        //    playerController.SetController(playerController.wallController);
+        //}
     }
 
     public void Jump()
