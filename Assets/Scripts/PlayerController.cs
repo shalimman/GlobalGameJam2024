@@ -75,10 +75,9 @@ public class PlayerController : MonoBehaviour
     public float horizontal;
     [SerializeField]
     public float speed;
+
+    public int playerIndex;
     
-
-    public Vector2 aimDirection;
-
     [SerializeField]
     public PlayerSubController currentController { get; private set; }
 
@@ -107,6 +106,11 @@ public class PlayerController : MonoBehaviour
         currentController.Update();
     }
 
+    public int GetPlayerIndex()
+    {
+        return playerIndex;
+    }
+
     public void SetController(PlayerSubController newController)
     {
         if (currentController != null)
@@ -132,11 +136,6 @@ public class PlayerController : MonoBehaviour
     public void Move(InputAction.CallbackContext context)
     {
         horizontal = context.ReadValue<Vector2>().x;
-
-        aimDirection = context.ReadValue<Vector2>();
-        aimDirection.x = Mathf.Round(aimDirection.x);
-        aimDirection.y = (IsGrounded() ? Mathf.Clamp(Mathf.Round(aimDirection.y), 0, 1) : Mathf.Round(aimDirection.y));
-        aimDirection.Normalize();
     }
 
 }
