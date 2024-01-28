@@ -129,7 +129,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 4
+      y: 83
       width: 18
       height: 25
     spriteID: becacda3a7f544b9f9be674075903e3d
@@ -140,18 +140,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 4}
+    uvTransform: {x: 4, y: 83}
   - name: sus-peackerf_Frame_1
     originalName: 
-    pivot: {x: 0.11111111, y: 0}
+    pivot: {x: 0.30434784, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 30
-      y: 4
-      width: 18
-      height: 25
+      x: 38
+      y: 43
+      width: 23
+      height: 27
     spriteID: 4fb07e95a9b714ad5adbbc0b753b6e61
     spriteBone: []
     spriteOutline: []
@@ -160,7 +160,167 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 30, y: 4}
+    uvTransform: {x: 38, y: 43}
+  - name: sus-peackerf_Frame_2
+    originalName: 
+    pivot: {x: 0.33333334, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 72
+      y: 4
+      width: 24
+      height: 27
+    spriteID: 1c254e977ae7949beb6ba39fc3d750d8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 72, y: 4}
+  - name: sus-peackerf_Frame_3
+    originalName: 
+    pivot: {x: 0.39999998, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 39
+      y: 4
+      width: 25
+      height: 29
+    spriteID: 30e154f1132fe4a10854ab4b4b5f34cf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 39, y: 4}
+  - name: sus-peackerf_Frame_4
+    originalName: 
+    pivot: {x: 0.4074074, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 27
+      height: 31
+    spriteID: a290275d86bd0473f890968a9c5cdf11
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: sus-peackerf_Frame_5
+    originalName: 
+    pivot: {x: 0.3846154, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 43
+      width: 26
+      height: 32
+    spriteID: a8a445172148a4da18d02308682b39b7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 43}
+  - name: sus-peackerf_Frame_6
+    originalName: 
+    pivot: {x: 0.2, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 104
+      y: 4
+      width: 20
+      height: 28
+    spriteID: e1d71c11d91c24135850d567a2a2d565
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 97, y: 4}
+  - name: sus-peackerf_Frame_7
+    originalName: 
+    pivot: {x: 0.21052632, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 69
+      y: 43
+      width: 19
+      height: 28
+    spriteID: f2bbb9f8d30394dada9c9cc0a3520dfe
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 63, y: 43}
+  - name: sus-peackerf_Frame_8
+    originalName: 
+    pivot: {x: 0.15789473, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 43
+      width: 19
+      height: 27
+    spriteID: 1f50dcf49123b43ad851c734c9c056f8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 91, y: 43}
+  - name: sus-peackerf_Frame_9
+    originalName: 
+    pivot: {x: 0.11111111, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 30
+      y: 83
+      width: 18
+      height: 25
+    spriteID: 7807442f042bd4be996804a9ab7141a0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 30, y: 83}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -181,11 +341,75 @@ ScriptedImporter:
     - name: sus-peackerf_Frame_1
       frameIndex: 1
       cellRect:
+        x: 9
+        y: 0
+        width: 23
+        height: 27
+      spriteId: 4fb07e95a9b714ad5adbbc0b753b6e61
+    - name: sus-peackerf_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 8
+        y: 0
+        width: 24
+        height: 27
+      spriteId: 1c254e977ae7949beb6ba39fc3d750d8
+    - name: sus-peackerf_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 6
+        y: 0
+        width: 25
+        height: 29
+      spriteId: 30e154f1132fe4a10854ab4b4b5f34cf
+    - name: sus-peackerf_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 5
+        y: 0
+        width: 27
+        height: 31
+      spriteId: a290275d86bd0473f890968a9c5cdf11
+    - name: sus-peackerf_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 6
+        y: 0
+        width: 26
+        height: 32
+      spriteId: a8a445172148a4da18d02308682b39b7
+    - name: sus-peackerf_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 5
+        y: 0
+        width: 27
+        height: 31
+      spriteId: e1d71c11d91c24135850d567a2a2d565
+    - name: sus-peackerf_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 6
+        y: 0
+        width: 25
+        height: 29
+      spriteId: f2bbb9f8d30394dada9c9cc0a3520dfe
+    - name: sus-peackerf_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 8
+        y: 0
+        width: 24
+        height: 27
+      spriteId: 1f50dcf49123b43ad851c734c9c056f8
+    - name: sus-peackerf_Frame_9
+      frameIndex: 9
+      cellRect:
         x: 14
         y: 0
         width: 18
         height: 25
-      spriteId: 4fb07e95a9b714ad5adbbc0b753b6e61
+      spriteId: 7807442f042bd4be996804a9ab7141a0
     linkedCells: []
     parentIndex: -1
   platformSettings: []
