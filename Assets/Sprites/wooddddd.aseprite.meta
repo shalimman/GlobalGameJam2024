@@ -121,7 +121,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: wood???
+  - name: wooddddd
     originalName: 
     pivot: {x: 0.5, y: 0}
     alignment: 9
@@ -132,7 +132,7 @@ ScriptedImporter:
       y: 4
       width: 16
       height: 16
-    spriteID: 8a306b6af7a544077b2a1f9c716c70c5
+    spriteID: 355aaef302d1d40f188505c7dbe35447
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -144,20 +144,20 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -110385430
-    name: wood???
+    guid: 575381767
+    name: wooddddd
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: wood???
+    - name: wooddddd
       frameIndex: 0
       cellRect:
         x: 0
         y: 0
         width: 16
         height: 16
-      spriteId: 8a306b6af7a544077b2a1f9c716c70c5
+      spriteId: 355aaef302d1d40f188505c7dbe35447
     linkedCells: []
     parentIndex: -1
   platformSettings:
