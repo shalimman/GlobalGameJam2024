@@ -5,6 +5,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Assertions.Must;
 using UnityEngine.InputSystem;
+using static UnityEditor.Timeline.TimelinePlaybackControls;
 
 public enum PlayerInputType
 {
@@ -48,14 +49,8 @@ public abstract class PlayerSubController
 
 public class PlayerController : MonoBehaviour
 {
-    [Header("Player Subcontrollers")]
-    public PlayerGroundController groundController;
-    public PlayerAirController airController;
-    public PlayerDashController dashController;
-    public PlayerWallController wallController;
 
     [Header("Player Components")]
-    [SerializeField]
     public SpriteRenderer sr;
     public Rigidbody2D rb;
 
@@ -65,45 +60,36 @@ public class PlayerController : MonoBehaviour
     public Transform wallCheck;
     [SerializeField]
     public LayerMask groundLayer;
-    [SerializeField]
-    public LayerMask powerupLayer;
-    [SerializeField]
-    public LayerMask wallLayer;
+
 
     [Header("Player Stats")]
-    [SerializeField]
     public float horizontal;
-    [SerializeField]
-    public float speed;
+    public float groundSpeed;
+    public float airSpeed;
+    public float jumpingPower;
+    public float normalGravity;
+    public float fallGravity;
 
     public int playerIndex;
     
-    [SerializeField]
-    public PlayerSubController currentController { get; private set; }
 
     private void Awake()
     {
-        groundController.playerController = this;
-        groundController.Initialize();
-        airController.playerController = this;
-        airController.Initialize();
-        dashController.playerController = this;
-        dashController.Initialize();
-        wallController.playerController = this;
-        wallController.Initialize();
-
-    }
-
-    private void Start()
-    {
         rb = GetComponent<Rigidbody2D>();
-        
-        SetController(groundController);
+        sr = GetComponent<SpriteRenderer>();
     }
 
-    void FixedUpdate()
+    private void Update()
     {
-        currentController.Update();
+        rb.velocity = new Vector2(horizontal * groundSpeed, rb.velocity.y);
+
+        if (horizontal != 0)
+            transform.localScale = new Vector3((horizontal < 0 ? -1.0f : 1.0f), 1.0f, 1.0f);
+
+        if (rb.velocity.y <= 0)
+            rb.gravityScale = fallGravity;
+        else
+            rb.gravityScale = normalGravity;
     }
 
     public int GetPlayerIndex()
@@ -111,31 +97,21 @@ public class PlayerController : MonoBehaviour
         return playerIndex;
     }
 
-    public void SetController(PlayerSubController newController)
-    {
-        if (currentController != null)
-            currentController.OnDisable();
-
-        currentController = newController;
-        currentController.OnEnable();
-    }
-
     public bool IsGrounded()
     {
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
     }
 
-    public void Jump(InputAction.CallbackContext context)
+    public void OnJump()
     {
-        if (context.started)
-        {
-            currentController.RecieveInput(PlayerInputType.Jump);
-        }
+        rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
     }
 
-    public void Move(InputAction.CallbackContext context)
+    public void OnMove(Vector2 vec)
     {
-        horizontal = context.ReadValue<Vector2>().x;
+        horizontal = vec.x;
     }
+
+    
 
 }

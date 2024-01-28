@@ -17,10 +17,17 @@ public class PlayerInputHandler : MonoBehaviour
         playerController = movers.FirstOrDefault(m => m.GetPlayerIndex() == index);
     }
 
-    public void OnMove(CallbackContext context)
+    public void Jump(InputAction.CallbackContext context)
     {
-        if (playerController != null)
-            playerController.horizontal = context.ReadValue<Vector2>().x;
+        if (context.started)
+        {
+            playerController.OnJump();
+        }
+    }
+
+    public void Move(InputAction.CallbackContext context)
+    {
+        playerController.OnMove(context.ReadValue<Vector2>());
     }
 
 }
