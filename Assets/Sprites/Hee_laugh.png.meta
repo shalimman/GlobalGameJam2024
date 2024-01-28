@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5b983d9a930acef41b74c1bfb8becccc
+guid: 4812164e1fad79747ad81fa980ac0eb7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -136,13 +136,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Hee_idle (1)_0
+      name: Hee_laugh_0
       rect:
         serializedVersion: 2
         x: 2
         y: 0
         width: 29
-        height: 27
+        height: 25
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,29 +150,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dcf6688f667a0404e8314fe2b9898dd1
-      internalID: 943652594
+      spriteID: 80ccae33fac1f87428e307bd874679fa
+      internalID: -1155370819
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hee_idle (1)_1
+      name: Hee_laugh_1
       rect:
         serializedVersion: 2
-        x: 34
+        x: 46
         y: 0
-        width: 29
-        height: 22
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 33
+        height: 30
+      alignment: 9
+      pivot: {x: 0.44, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c67ee778ab21444f812a5a15c508945
-      internalID: -1628932135
+      spriteID: 8f28edaafe6eb8b4898b67dbf220e4a5
+      internalID: -670160040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hee_laugh_3
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 0
+        width: 41
+        height: 43
+      alignment: 9
+      pivot: {x: 0.33, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ccac2763ed3fff4c9e487ef92a21de2
+      internalID: -2002217204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hee_laugh_5
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 0
+        width: 41
+        height: 44
+      alignment: 9
+      pivot: {x: 0.33, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de34c369f312f2741b7a851790487670
+      internalID: -182619190
       vertices: []
       indices: 
       edges: []
@@ -188,8 +230,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Hee_idle (1)_0: 943652594
-      Hee_idle (1)_1: -1628932135
+      Hee_laugh_0: -1155370819
+      Hee_laugh_1: -670160040
+      Hee_laugh_2: -1400052327
+      Hee_laugh_3: -2002217204
+      Hee_laugh_4: -2098971071
+      Hee_laugh_5: -182619190
+      Hee_laugh_6: -1266450681
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

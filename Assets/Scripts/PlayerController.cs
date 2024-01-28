@@ -53,6 +53,7 @@ public class PlayerController : MonoBehaviour
     [Header("Player Components")]
     public SpriteRenderer sr;
     public Rigidbody2D rb;
+    public Animator anim;
 
     [SerializeField]
     public Transform groundCheck;
@@ -60,6 +61,8 @@ public class PlayerController : MonoBehaviour
     public Transform wallCheck;
     [SerializeField]
     public LayerMask groundLayer;
+
+    public GameObject heeha;
 
 
     [Header("Player Stats")]
@@ -77,14 +80,18 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
+        heeha.SetActive(false);
     }
 
     private void Update()
     {
+        anim.SetFloat("horizontal", Mathf.Abs(horizontal));
+
         rb.velocity = new Vector2(horizontal * groundSpeed, rb.velocity.y);
 
         if (horizontal != 0)
-            transform.localScale = new Vector3((horizontal < 0 ? -1.0f : 1.0f), 1.0f, 1.0f);
+            transform.localScale = new Vector3((horizontal < 0 ? transform.localScale.x * - 1.0f : transform.localScale.x * 1.0f), 1.0f, 1.0f);
 
         if (rb.velocity.y <= 0)
             rb.gravityScale = fallGravity;
@@ -105,7 +112,10 @@ public class PlayerController : MonoBehaviour
     public void OnJump()
     {
         if (IsGrounded())
+        {
+            anim.SetTrigger("Jump");
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+        }
     }
 
     public void OnMove(Vector2 vec)
@@ -113,6 +123,27 @@ public class PlayerController : MonoBehaviour
         horizontal = vec.x;
     }
 
-    
+    public void OnHEEHA()
+    {
+        yield return StartCoroutine("HEEHA");
+    }
+
+    IEnumerator HEEHA()
+    {
+        // suspend execution for 5 seconds
+        yield return new WaitForSeconds(5);
+        print("WaitAndPrint " + Time.time);
+    }
+
+    IEnumerator Start()
+    {
+        print("Starting " + Time.time);
+
+        // Start function WaitAndPrint as a coroutine
+        yield return StartCoroutine("WaitAndPrint");
+        print("Done " + Time.time);
+    }
+
+
 
 }
