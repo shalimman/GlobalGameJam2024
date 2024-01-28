@@ -19,7 +19,7 @@ public class PlayerInputHandler : MonoBehaviour
 
     public void Jump(InputAction.CallbackContext context)
     {
-        if (context.started)
+        if (context.started && playerController != null)
         {
             playerController.OnJump();
         }
@@ -29,6 +29,14 @@ public class PlayerInputHandler : MonoBehaviour
     {
         if(playerController != null)
             playerController.OnMove(context.ReadValue<Vector2>());
+    }
+
+    public void Laugh(InputAction.CallbackContext context)
+    {
+        if (context.started && playerController != null)
+        {
+            playerController.OnHEEHA();
+        }
     }
 
 }

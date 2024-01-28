@@ -138,6 +138,22 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: b7ea1a1a-3ac2-4c6f-9fba-ad109626a830
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6436305767950060590}
+        m_TargetAssemblyTypeName: PlayerInputHandler, Assembly-CSharp
+        m_MethodName: Laugh
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 1e7d70ac-4b0f-45d7-a71e-af08bef5b8fa
+    m_ActionName: Player/Laugh[/XInputControllerWindows/buttonEast,/XInputControllerWindows1/buttonEast,/Keyboard/space]
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: Gamepad
   m_DefaultActionMap: Player
