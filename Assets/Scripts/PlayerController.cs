@@ -62,9 +62,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     public LayerMask groundLayer;
 
-    public GameObject heeha;
-
-
     [Header("Player Stats")]
     public float horizontal;
     public float groundSpeed;
@@ -72,6 +69,10 @@ public class PlayerController : MonoBehaviour
     public float jumpingPower;
     public float normalGravity;
     public float fallGravity;
+
+    public float heehaDuration;
+    public bool isLaughing;
+    public float laughTimer;
 
     public int playerIndex;
     
@@ -81,22 +82,35 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
-        heeha.SetActive(false);
+        isLaughing = false;
     }
 
     private void Update()
     {
         anim.SetFloat("horizontal", Mathf.Abs(horizontal));
+        anim.SetFloat("vertical", rb.velocity.y);
 
         rb.velocity = new Vector2(horizontal * groundSpeed, rb.velocity.y);
 
-        if (horizontal != 0)
-            transform.localScale = new Vector3((horizontal < 0 ? transform.localScale.x * - 1.0f : transform.localScale.x * 1.0f), 1.0f, 1.0f);
+        if (laughTimer > 0)
+            laughTimer -= Time.deltaTime;
+        else
+            isLaughing = false;
+
+        if (!isLaughing)
+        {
+            if (horizontal != 0)
+                sr.flipX = (horizontal < 0 ? true : false);
+            else
+                sr.flipX = false;
+        }
 
         if (rb.velocity.y <= 0)
             rb.gravityScale = fallGravity;
         else
             rb.gravityScale = normalGravity;
+
+        anim.SetBool("grounded", IsGrounded());
     }
 
     public int GetPlayerIndex()
@@ -125,24 +139,12 @@ public class PlayerController : MonoBehaviour
 
     public void OnHEEHA()
     {
-        yield return StartCoroutine("HEEHA");
+        laughTimer = heehaDuration;
+        isLaughing = true;
+        sr.flipX = false;
+        anim.SetTrigger("Laugh");
     }
 
-    IEnumerator HEEHA()
-    {
-        // suspend execution for 5 seconds
-        yield return new WaitForSeconds(5);
-        print("WaitAndPrint " + Time.time);
-    }
-
-    IEnumerator Start()
-    {
-        print("Starting " + Time.time);
-
-        // Start function WaitAndPrint as a coroutine
-        yield return StartCoroutine("WaitAndPrint");
-        print("Done " + Time.time);
-    }
 
 
 
