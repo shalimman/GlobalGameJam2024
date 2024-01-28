@@ -521,6 +521,7 @@ GameObject:
   m_Component:
   - component: {fileID: 34507305}
   - component: {fileID: 34507306}
+  - component: {fileID: 34507307}
   m_Layer: 6
   m_Name: spikewall
   m_TagString: Untagged
@@ -576,6 +577,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 14.584808, y: 1, z: 1}
   m_Center: {x: 6.7924056, y: 0, z: 0}
+--- !u!114 &34507307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 34507304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dfcee391e82a954db70d732c728a7cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &35280768
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -661,6 +674,7 @@ GameObject:
   - component: {fileID: 41999045}
   - component: {fileID: 41999044}
   - component: {fileID: 41999046}
+  - component: {fileID: 41999047}
   m_Layer: 0
   m_Name: Triangle
   m_TagString: Untagged
@@ -780,6 +794,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &41999047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 41999043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dfcee391e82a954db70d732c728a7cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &55838583 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5504748627749067693, guid: bfc5ecedd92cdbe43bf64670496338e8, type: 3}
@@ -926,6 +952,7 @@ GameObject:
   - component: {fileID: 86974835}
   - component: {fileID: 86974834}
   - component: {fileID: 86974836}
+  - component: {fileID: 86974837}
   m_Layer: 0
   m_Name: Triangle (1)
   m_TagString: Untagged
@@ -1045,6 +1072,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &86974837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 86974833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dfcee391e82a954db70d732c728a7cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &92585888
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1666,7 +1705,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 239797617}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -1915,6 +1954,7 @@ GameObject:
   - component: {fileID: 265225260}
   - component: {fileID: 265225259}
   - component: {fileID: 265225258}
+  - component: {fileID: 265225261}
   m_Layer: 0
   m_Name: Bottlespikes (2)
   m_TagString: Untagged
@@ -1954,7 +1994,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.03587901}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1965,7 +2005,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.48, y: 0.16}
+  m_Size: {x: 0.48, y: 0.08824198}
   m_EdgeRadius: 0
 --- !u!212 &265225259
 SpriteRenderer:
@@ -2034,6 +2074,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1430974698}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &265225261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265225257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dfcee391e82a954db70d732c728a7cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &296521448
 GameObject:
   m_ObjectHideFlags: 0
@@ -3150,7 +3202,7 @@ GameObject:
   m_Component:
   - component: {fileID: 697064247}
   - component: {fileID: 697064246}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: slidemid)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3235,6 +3287,7 @@ GameObject:
   - component: {fileID: 716947170}
   - component: {fileID: 716947169}
   - component: {fileID: 716947168}
+  - component: {fileID: 716947171}
   m_Layer: 0
   m_Name: Bottlespikes (1)
   m_TagString: Untagged
@@ -3274,7 +3327,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.036582522}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -3285,7 +3338,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.48, y: 0.16}
+  m_Size: {x: 0.48, y: 0.08683495}
   m_EdgeRadius: 0
 --- !u!212 &716947169
 SpriteRenderer:
@@ -3354,6 +3407,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1430974698}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &716947171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 716947167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dfcee391e82a954db70d732c728a7cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &720349439
 GameObject:
   m_ObjectHideFlags: 0
@@ -3495,7 +3560,7 @@ GameObject:
   - component: {fileID: 726787645}
   - component: {fileID: 726787644}
   - component: {fileID: 726787646}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: slideright)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4380,6 +4445,7 @@ GameObject:
   - component: {fileID: 823986813}
   - component: {fileID: 823986812}
   - component: {fileID: 823986811}
+  - component: {fileID: 823986814}
   m_Layer: 0
   m_Name: Bottlespikes (3)
   m_TagString: Untagged
@@ -4419,7 +4485,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.03306497}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -4430,7 +4496,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.48, y: 0.16}
+  m_Size: {x: 0.48, y: 0.09387006}
   m_EdgeRadius: 0
 --- !u!212 &823986812
 SpriteRenderer:
@@ -4499,6 +4565,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1430974698}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &823986814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 823986810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dfcee391e82a954db70d732c728a7cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &844605923
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4894,6 +4972,7 @@ GameObject:
   - component: {fileID: 866548338}
   - component: {fileID: 866548337}
   - component: {fileID: 866548339}
+  - component: {fileID: 866548340}
   m_Layer: 0
   m_Name: Triangle (2)
   m_TagString: Untagged
@@ -4989,6 +5068,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.99999994, y: 1, z: 0.2}
   m_Center: {x: -0.0000009536743, y: 0.21133357, z: 0}
+--- !u!114 &866548340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 866548336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dfcee391e82a954db70d732c728a7cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &877869179
 GameObject:
   m_ObjectHideFlags: 0
@@ -5000,6 +5091,7 @@ GameObject:
   - component: {fileID: 877869180}
   - component: {fileID: 877869181}
   - component: {fileID: 877869182}
+  - component: {fileID: 877869183}
   m_Layer: 0
   m_Name: Triangle (15)
   m_TagString: Untagged
@@ -5095,6 +5187,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.99999994, y: 1, z: 0.2}
   m_Center: {x: 0.0000009536743, y: 0.21133357, z: 0}
+--- !u!114 &877869183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 877869179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dfcee391e82a954db70d732c728a7cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &907130694
 GameObject:
   m_ObjectHideFlags: 0
@@ -5423,9 +5527,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3117035986277320814, guid: bfc5ecedd92cdbe43bf64670496338e8, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 5471077701679989049, guid: bfc5ecedd92cdbe43bf64670496338e8, type: 3}
       propertyPath: m_Name
       value: Player stuff
+      objectReference: {fileID: 0}
+    - target: {fileID: 5817384337861354278, guid: bfc5ecedd92cdbe43bf64670496338e8, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6061,7 +6173,7 @@ GameObject:
   - component: {fileID: 1276572451}
   - component: {fileID: 1276572450}
   - component: {fileID: 1276572452}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: slideleft)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
