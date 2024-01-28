@@ -104,7 +104,8 @@ public class PlayerController : MonoBehaviour
 
     public void OnJump()
     {
-        rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+        if (IsGrounded())
+            rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
     }
 
     public void OnMove(Vector2 vec)
