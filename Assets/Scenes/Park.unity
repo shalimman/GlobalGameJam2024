@@ -3206,7 +3206,7 @@ GameObject:
   - component: {fileID: 907130695}
   - component: {fileID: 907130697}
   - component: {fileID: 907130696}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground (park) (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
