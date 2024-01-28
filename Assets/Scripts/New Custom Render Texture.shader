@@ -1,37 +1,54 @@
-Shader "CustomRenderTexture/New Custom Render Texture"
+Shader"Unlit/GlowBall"
 {
     Properties
     {
-        _Color ("Color", Color) = (1,1,1,1)
-        _MainTex("InputTex", 2D) = "white" {}
-     }
+    }
+    SubShader
+    {
+        Tags { "RenderType"="Transparent" "Queue"="Transparent" }
+LOD100
 
-     SubShader
-     {
-        Blend One Zero
+        BlendOp
+Max
+        ZWriteOff
 
         Pass
         {
-            Name "New Custom Render Texture"
-
             CGPROGRAM
-            #include "UnityCustomRenderTexture.cginc"
-            #pragma vertex CustomRenderTextureVertexShader
+            #pragma vertex vert
             #pragma fragment frag
-            #pragma target 3.0
+            // make fog work
+            #pragma multi_compile_fog
 
-            float4      _Color;
-            sampler2D   _MainTex;
+#include "UnityCG.cginc"
 
-            float4 frag(v2f_customrendertexture IN) : SV_Target
-            {
-                float2 uv = IN.localTexcoord.xy;
-                float4 color = tex2D(_MainTex, uv) * _Color;
+struct appdata
+{
+    float4 vertex : POSITION;
+    float3 normal : NORMAL0;
+};
 
-                // TODO: Replace this by actual code!
-                uint2 p = uv.xy * 256;
-                return countbits(~(p.x & p.y) + 1) % 2 * float4(uv, 1, 1) * color;
-            }
+struct v2f
+{
+    float3 normal : TEXCOORD0;
+    float3 view : TEXCOORD1;
+    float4 vertex : SV_POSITION;
+};
+    
+v2f vert(appdata v)
+{
+    v2f o;
+    o.vertex = UnityObjectToClipPos(v.vertex);
+    o.normal = mul(UNITY_MATRIX_IT_MV, v.normal);
+    o.view = -UnityObjectToViewPos(v.vertex);
+    return o;
+}
+
+fixed4 frag(v2f i) : SV_Target
+{
+    float fresnel = saturate(dot(normalize(i.normal), normalize(i.view)));
+    return float4(0, 0, 0, fresnel * fresnel);
+}
             ENDCG
         }
     }
