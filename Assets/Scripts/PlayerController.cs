@@ -62,6 +62,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     public LayerMask groundLayer;
 
+    public GameObject heeha;
+
 
     [Header("Player Stats")]
     public float horizontal;
@@ -79,6 +81,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
+        heeha.SetActive(false);
     }
 
     private void Update()
@@ -108,7 +111,6 @@ public class PlayerController : MonoBehaviour
 
     public void OnJump()
     {
-
         if (IsGrounded())
         {
             anim.SetTrigger("Jump");
@@ -121,6 +123,27 @@ public class PlayerController : MonoBehaviour
         horizontal = vec.x;
     }
 
-    
+    public void OnHEEHA()
+    {
+        yield return StartCoroutine("HEEHA");
+    }
+
+    IEnumerator HEEHA()
+    {
+        // suspend execution for 5 seconds
+        yield return new WaitForSeconds(5);
+        print("WaitAndPrint " + Time.time);
+    }
+
+    IEnumerator Start()
+    {
+        print("Starting " + Time.time);
+
+        // Start function WaitAndPrint as a coroutine
+        yield return StartCoroutine("WaitAndPrint");
+        print("Done " + Time.time);
+    }
+
+
 
 }
