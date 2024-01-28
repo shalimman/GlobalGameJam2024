@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5b983d9a930acef41b74c1bfb8becccc
+guid: 2e5b88463addfd34fb33b2bfdaac3b0c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -136,13 +136,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Hee_idle (1)_0
+      name: Ha_jump_0
       rect:
         serializedVersion: 2
         x: 2
         y: 0
         width: 29
-        height: 27
+        height: 54
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,20 +150,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dcf6688f667a0404e8314fe2b9898dd1
-      internalID: 943652594
+      spriteID: 0e501e09642c5e74cb3c1eaba9120ec4
+      internalID: -564246608
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hee_idle (1)_1
+      name: Ha_jump_1
       rect:
         serializedVersion: 2
-        x: 34
+        x: 36
         y: 0
-        width: 29
-        height: 22
+        width: 25
+        height: 63
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,8 +171,113 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c67ee778ab21444f812a5a15c508945
-      internalID: -1628932135
+      spriteID: 7d7fbf2f83af38548b3f0a3f3241c972
+      internalID: -923772832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ha_jump_2
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 0
+        width: 30
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57060b2d10aef754892cd388c58cea61
+      internalID: -67833772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ha_jump_3
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 2
+        width: 31
+        height: 62
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4093a08eb87b9bc40a74bd916f57b20a
+      internalID: -918081791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ha_jump_4
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 2
+        width: 28
+        height: 62
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3c5292494f514e4197b0cdde46b61b2
+      internalID: 883684126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ha_jump_5
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 5
+        width: 31
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d964660cfa6e8444aecdf4fd78e9533
+      internalID: -1714032908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ha_jump_6
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 0
+        width: 28
+        height: 55
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e2dde5a2b4c7924bb87720d31cf1e7e
+      internalID: -803395693
       vertices: []
       indices: 
       edges: []
@@ -188,8 +293,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Hee_idle (1)_0: 943652594
-      Hee_idle (1)_1: -1628932135
+      Ha_jump_0: -564246608
+      Ha_jump_1: -923772832
+      Ha_jump_2: -67833772
+      Ha_jump_3: -918081791
+      Ha_jump_4: 883684126
+      Ha_jump_5: -1714032908
+      Ha_jump_6: -803395693
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

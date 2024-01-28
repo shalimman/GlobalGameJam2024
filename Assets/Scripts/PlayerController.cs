@@ -53,6 +53,7 @@ public class PlayerController : MonoBehaviour
     [Header("Player Components")]
     public SpriteRenderer sr;
     public Rigidbody2D rb;
+    public Animator anim;
 
     [SerializeField]
     public Transform groundCheck;
@@ -77,14 +78,17 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
     }
 
     private void Update()
     {
+        anim.SetFloat("horizontal", Mathf.Abs(horizontal));
+
         rb.velocity = new Vector2(horizontal * groundSpeed, rb.velocity.y);
 
         if (horizontal != 0)
-            transform.localScale = new Vector3((horizontal < 0 ? -1.0f : 1.0f), 1.0f, 1.0f);
+            transform.localScale = new Vector3((horizontal < 0 ? transform.localScale.x * - 1.0f : transform.localScale.x * 1.0f), 1.0f, 1.0f);
 
         if (rb.velocity.y <= 0)
             rb.gravityScale = fallGravity;
@@ -104,8 +108,12 @@ public class PlayerController : MonoBehaviour
 
     public void OnJump()
     {
+
         if (IsGrounded())
+        {
+            anim.SetTrigger("Jump");
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+        }
     }
 
     public void OnMove(Vector2 vec)
