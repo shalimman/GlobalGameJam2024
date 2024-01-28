@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public enum Laugh
 {
@@ -12,7 +14,7 @@ public class SadPerson : MonoBehaviour
 {
     public int state;
     private Animator anim;
-
+    public string nextScene;
 
 
     // Start is called before the first frame update
@@ -26,7 +28,10 @@ public class SadPerson : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
     }
 
     public void ReceiveInput(Laugh heeha)
@@ -72,6 +77,7 @@ public class SadPerson : MonoBehaviour
                 {
                     state++;
                     anim.SetBool("Happy", true);
+                    StartCoroutine("LoadLevel");
                 }
                 else
                 {
@@ -83,6 +89,13 @@ public class SadPerson : MonoBehaviour
             default:
                 break;
         }
+    }
+
+    IEnumerator LoadLevel()
+    {
+        yield return new WaitForSeconds(5);
+        SceneManager.LoadScene(nextScene);
+
     }
 
     private void OnTriggerStay2D(Collider2D collision)

@@ -86,7 +86,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1869692541206267282}
   - component: {fileID: 9108283473987338409}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Headbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -233,7 +233,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 943652594, guid: 5b983d9a930acef41b74c1bfb8becccc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -294,7 +294,7 @@ MonoBehaviour:
     m_Bits: 64
   SadPersonLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   horizontal: 0
   groundSpeed: 10
   airSpeed: 5
@@ -450,7 +450,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9144082864442505182}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: HaTracker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -512,7 +512,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1769898806796760618}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -727,7 +727,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: -429620032, guid: a4c4f84322e75fe4d819d100c6af849d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -788,7 +788,7 @@ MonoBehaviour:
     m_Bits: 64
   SadPersonLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   horizontal: 0
   groundSpeed: 10
   airSpeed: 5
@@ -954,7 +954,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5504748627749067693}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: HaTracker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
