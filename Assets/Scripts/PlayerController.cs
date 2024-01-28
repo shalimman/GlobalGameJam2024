@@ -61,6 +61,9 @@ public class PlayerController : MonoBehaviour
     public Transform wallCheck;
     [SerializeField]
     public LayerMask groundLayer;
+    [SerializeField]
+    public LayerMask SadPersonLayer;
+
 
     [Header("Player Stats")]
     public float horizontal;
@@ -143,6 +146,15 @@ public class PlayerController : MonoBehaviour
         isLaughing = true;
         sr.flipX = false;
         anim.SetTrigger("Laugh");
+
+        Collider2D sad_person = Physics2D.OverlapCircle(groundCheck.position, 3f, SadPersonLayer);
+        if(sad_person)
+        {
+            SadPerson sad = sad_person.GetComponent<SadPerson>();
+            Laugh heeha = (playerIndex == 1 ? Laugh.Hee : Laugh.Ha);
+            sad.ReceiveInput(heeha);
+        }
+        
     }
 
 
