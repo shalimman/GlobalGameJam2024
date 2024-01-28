@@ -764,8 +764,8 @@ GameObject:
   - component: {fileID: 597992461}
   - component: {fileID: 597992460}
   - component: {fileID: 597992464}
-  - component: {fileID: 597992466}
-  - component: {fileID: 597992465}
+  - component: {fileID: 597992463}
+  - component: {fileID: 597992462}
   m_Layer: 6
   m_Name: Tilemap
   m_TagString: Ground
